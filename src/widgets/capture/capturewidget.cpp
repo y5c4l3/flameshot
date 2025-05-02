@@ -476,8 +476,7 @@ void CaptureWidget::initQuitPrompt()
     m_quitPrompt->hide();
 
     QString baseSheet = "QDialog { background-color: %1; }"
-                        "QLabel, QCheckBox { color: %2 }"
-                        "QPushButton { background-color: %1; color: %2 }";
+                        "QLabel, QCheckBox { color: %2; }";
     QColor text = ColorUtils::colorIsDark(m_uiColor) ? Qt::white : Qt::black;
     QString styleSheet = baseSheet.arg(m_uiColor.name()).arg(text.name());
 
